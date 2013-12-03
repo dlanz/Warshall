@@ -1,15 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package warshall;
-
+/**
+ * @author Dan
+ */
 import java.util.Arrays;
 
-/**
- *
- * @author Dans
- */
 public class test {
     
     

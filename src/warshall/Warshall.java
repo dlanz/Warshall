@@ -21,16 +21,12 @@ public class Warshall {
     
     public void process() {
     
-        for(int k = 0; k < this.size-1; k++){
+        for(int k = 1; k < this.size; k++){
            for(int i = 0; i < this.size; i++){
                for(int j = 0; j < this.size; j++){
-                   if(this.relation[i][j][k] == 1){
-                       this.relation[i][j][k+1] = 1;
-                   }
-
-                   if(this.relation[i][j][k] == 1 && this.relation[i][j][k+1] == 1){
-                       this.relation[i][k+1][k] = 1;
-                       this.relation[k+1][j][k] = 1;
+                   
+                   if(this.relation[i][j][k-1] == 1 || (this.relation[i][k][k-1] == 1 && this.relation[k][j][k-1] == 1)){
+                       this.relation[i][j][k] = 1;
                    }
                } 
            }
